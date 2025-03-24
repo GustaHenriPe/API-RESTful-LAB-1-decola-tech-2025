@@ -16,11 +16,8 @@ public abstract class BaseItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
-    private String number;
+    private String icon;
 
-    @Column(name = "additional_limit", scale = 13, precision = 2)
-    private BigDecimal limit;
-
+    private String description;
 
 }

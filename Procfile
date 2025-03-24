@@ -1,0 +1,1 @@
+web: java -jar target/decola-tech-20250.0.1-SNAPSHOT.jar

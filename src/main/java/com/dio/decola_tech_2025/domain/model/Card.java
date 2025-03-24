@@ -1,9 +1,27 @@
 package com.dio.decola_tech_2025.domain.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "tb_card")
-public class Card extends BaseItem{
+public class Card {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true)
+    private String number;
+
+    @Column(name = "available_limit", precision = 13, scale = 2)
+    private BigDecimal limit;
 
 }
 
